@@ -1,0 +1,680 @@
+@use './../abstract/color' as c;
+@use './../abstract/mixins' as mx;
+@use './../abstract/typography' as t;
+
+
+/* the main of single film ========================== */
+
+
+h1, h2, h3{
+    font-family: t.$main-heading-font;
+}
+
+.poster-movie-1{
+    display: none;
+}
+
+
+
+@media screen and (max-width:mx.$media-mobile-width) {
+    
+    .single-film-main{
+
+
+        iframe{
+
+            margin-top: 4rem;
+            width:100%;
+            height: 500px;
+        }
+
+        .single-main-section1{
+    
+            .showtime-sec{
+                display: none;
+            }
+    
+            nav.single-nav{
+                padding: 0;
+                ul{
+                    padding:0;
+                    margin:0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    li{
+                        flex: 1;
+                        list-style: none;
+                        display: flex; 
+                        justify-content: center;
+                        align-items: center;
+                        padding: 1rem;
+                        font-family:t.$main-heading-font;
+                        font-size: 20px;
+                        border-right: 1px solid black;
+    
+    
+                        &:hover{
+                            background-color: black;
+                            
+    
+                            a{
+                               color:white; 
+                            }
+                        }
+    
+                        a{
+                            text-decoration: none;
+                            color:black;
+                            font-weight: bold;
+                        }
+    
+                    }
+    
+                    li:last-of-type{
+                        border-right: none;
+                    }
+    
+                }
+            }
+    
+            .description-poster-section{
+                padding:1rem;
+    
+                .movie-poster-inner{
+    
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    align-items: start;
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding:2rem 0;
+    
+                    border-bottom: 5px solid black;
+    
+                    .description-section{
+                        flex: 1 0 20%;
+                        
+        
+                        h1{
+                            text-align: left;
+                            font-size: 40px;
+                            margin: 0;
+                        }
+        
+                        p{
+                            font-weight: bold;
+                            margin-top: 0;
+                        }
+        
+                        .con-year-lang{
+                            display: flex;
+                            justify-content: start;
+                            align-items: center;
+                            gap:1rem;
+        
+                            .con-lang-inner{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+        
+                               p{
+                                font-size: 1rem;
+                                padding:.2rem .5rem;
+                                text-align: center;
+                                border-right: 1px solid black;
+                               }  
+                               p:last-of-type{
+                                border-right: none;
+                               }
+                            }
+                        }
+                    }
+        
+                    .poster-movie{
+                        flex: 1;
+        
+                        img{
+                           box-sizing: border-box;
+                            width:90%; 
+                        }
+                        
+                    }
+                }
+                
+            }
+        }
+    
+        .movie-description-section{
+            padding: 1rem;
+    
+            h2{
+                font-size: 23px;
+                text-align: left;
+            }
+            p{
+                line-height: 1.3;
+                text-align: justify;
+            }
+            .genre-section{
+                margin:3rem 0 1rem;
+                button{
+                    @include mx.BlackBtnMob;
+                    padding: .5rem;
+                }
+            }
+    
+            .aboutAuthor{
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                gap:1rem;
+                box-sizing: border-box;
+                width: 100%;
+    
+                margin: 4rem 0;
+    
+                img{
+                    box-sizing: border-box;
+                    width: 200px;
+                    height: 200px;
+                }
+    
+                .about-director-inner{
+                    box-sizing: border-box;
+                    width: 100%;
+                    flex:1 0 60%;
+    
+                    h3{
+                        text-transform: capitalize;
+                        font-size: 20px;
+                        margin:0;
+                        font-weight: normal;
+                    }
+                    h2{
+                        margin-top: 0;
+                        border-bottom: 3px solid black;
+                    }
+                    p{
+                        line-height: 1.3;
+                    
+                    }
+                }
+            }
+    
+        }
+    
+        .showtime-section2{
+            padding: 1rem;
+    
+            h2{
+                text-align: left;
+                margin-bottom: 0;
+            }
+    
+            .showtime-info{
+                padding: 1rem;
+                background-color:c.$accent-color-l;
+                
+    
+                h2{
+                    border-bottom: 2px solid black;
+                }
+    
+                button{
+                    @include mx.BlackBtnMob;
+                    padding: 1rem .5rem;
+                }
+            }
+        }
+        .cast-info-section3{
+            padding: 1rem;
+            
+            h2{
+               text-align: left; 
+            }
+            
+            
+            .cast-group1{
+                margin-bottom: 2rem;
+                h3{
+                    margin: 0;
+                }
+                p{
+                    margin:0;
+                }
+            }
+    
+            .cast-group2{
+                h3{
+                    margin: 0;
+                }
+                p{
+                    margin:0;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:mx.$media-mobile-width) {
+   
+    
+    .showtime-section2,
+    .cast-info-section3{
+        display: none;
+    }
+    .movie-description-section:target {
+        display: block;
+    }
+
+
+
+   
+   
+    .single-film-main{
+        iframe{
+            margin-top: 4rem;
+            width:100%;
+            height: 500px;
+        }
+        .single-main-section1{
+    
+            .showtime-sec{
+                display: none;
+            }
+    
+            nav.single-nav{
+                padding: 0;
+                ul{
+                    padding:0;
+                    margin:0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    li{
+                        flex: 1;
+                        list-style: none;
+                        display: flex; 
+                        justify-content: center;
+                        align-items: center;
+                        gap:1rem;
+                        padding: 1rem;
+                        font-family:t.$main-heading-font;
+                        font-size: 20px;
+                        border-right: 1px solid black;
+    
+
+    
+                        a{
+                            text-decoration: none;
+                            color:white;
+                            font-weight: bold;
+                        }
+    
+                    }
+    
+                    li:last-of-type{
+                        border-right: none;
+                    }
+    
+                }
+            }
+    
+            .description-poster-section{
+                padding:1rem;
+    
+                .movie-poster-inner{
+    
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    align-items: start;
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding:2rem 1rem;
+    
+                    border-bottom: 5px solid black;
+    
+                    .description-section{
+                        flex: 1 0 20%;
+                        
+        
+                        h1{
+                            text-align: left !important;
+                            margin: 0;
+                        }
+        
+                        p{
+                            font-weight: bold;
+                            margin-top: 0;
+                        }
+        
+                        .con-year-lang{
+                            display: flex;
+                            justify-content: start;
+                            align-items: center;
+                            gap:1rem;
+        
+                            .con-lang-inner{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+        
+                               p:first-of-type{
+                                padding-left: 0;
+                               } 
+
+                               p{
+                                padding:.2rem .5rem;
+                                text-align: center;
+                                border-right: 1px solid black;
+                               }  
+                               p:last-of-type{
+                                border-right: none;
+                               }
+
+                               p span{
+                                padding-left:2px;
+                               }
+                            }
+                        }
+                    }
+        
+                    .poster-movie{
+                        flex: 1;
+        
+                        img{
+                           box-sizing: border-box;
+                            width:90%; 
+                        }
+                        
+                    }
+                }
+                
+            }
+        }
+    
+        .movie-description-section{
+            padding: 1rem;
+    
+            h2{
+                text-align: left !important;
+            }
+            p{
+                line-height: 1.3;
+                text-align: justify;
+            }
+            .genre-section{
+                margin:3rem 0 1rem;
+                button{
+                    @include mx.BlackBtnMob;
+                    padding: .5rem;
+                }
+            }
+    
+            .aboutAuthor{
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                gap:1rem;
+                box-sizing: border-box;
+                width: 100%;
+    
+                margin: 4rem 0;
+    
+                img{
+                    box-sizing: border-box;
+                    width: 200px;
+                    height: 200px;
+                }
+    
+                .about-director-inner{
+                    box-sizing: border-box;
+                    width: 100%;
+                    flex:1 0 40%;
+    
+                    h3{
+                        text-transform: capitalize;
+                        font-size: 20px;
+                        margin:0;
+                        font-weight: normal;
+                    }
+                    h2{
+                        margin-top: 0;
+                        border-bottom: 3px solid black;
+                    }
+                    p{
+                        line-height: 1.3;
+                    
+                    }
+                }
+            }
+    
+        }
+    
+        .showtime-section2{
+            padding: 1rem;
+    
+            h2{
+                text-align: left;
+                margin-bottom: 0;
+            }
+    
+            .showtime-info{
+                padding: 1rem;
+                background-color:c.$accent-color-l;
+                
+    
+                h2{
+                    border-bottom: 2px solid black;
+                }
+    
+                button{
+                    @include mx.BlackBtnMob;
+                    padding: 1rem .5rem;
+                }
+            }
+        }
+        .cast-info-section3{
+            padding: 1rem;
+            
+            h2{
+               text-align: left; 
+            }
+            
+            
+            .cast-group1{
+                margin-bottom: 2rem;
+                h3{
+                    margin: 0;
+                }
+                p{
+                    margin:0;
+                }
+            }
+    
+            .cast-group2{
+                h3{
+                    margin: 0;
+                }
+                p{
+                    margin:0;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+@media screen and (min-width:mx.$media-tablet-width) {
+    
+
+    .single-film-main{
+
+        .single-main-section1{
+            .showtime-sec{
+                display: none;
+            }
+        }
+
+
+        .movie-description-section{
+
+            .genre-section{
+                button{
+                    @include mx.BlackBtnMob;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (min-width:1200px){
+    
+
+    .single-film-main{
+        // padding: 3rem;
+
+        iframe{
+            margin-top: 4rem;
+        }
+
+        .single-main-section1{
+           
+            display: flex;
+            gap:1rem;
+            padding: 1rem;
+            @include mx.maxWidthWeb;
+            margin: auto;
+
+
+            .showtime-sec{
+                flex: 1;
+                // display: block !important;
+                display: flex;
+                flex-flow: column wrap;
+                gap:6rem;
+
+                h2{
+                    text-align: left !important;   
+                    margin-bottom: 0;              
+                }
+
+                .showtime-info{
+                    padding: 1rem;
+                    background-color:c.$accent-color-l;
+                    
+        
+                    h2{
+                        border-bottom: 2px solid black;
+                    }
+        
+                    button{
+                        @include mx.BlackBtnMob;
+                        padding: 1rem .5rem;
+                    }
+                }
+
+                .gif1{
+                    box-sizing: border-box;
+                    width: 100%;
+                }
+            }
+
+            .nav-poster-wrapper{
+
+                flex: 1;
+                position: relative;
+
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                box-sizing: border-box;
+                width: 100%;
+
+
+                .single-nav{
+                    box-sizing: border-box;
+                    width: 100%;
+                }
+                .single-nav ul{
+                    flex-direction: column;
+                    margin-top: 3rem;
+                    
+
+                    li{
+                        flex: 1;
+                        border:none;
+                        margin-bottom: 1rem;
+                    }
+                    li#link2-li{
+                        display: none;
+                    }
+                }
+
+                .poster-movie-1{
+                    // display: block;
+                    display: flex;
+                    img{
+                        box-sizing: border-box;
+                        width:100%;
+                    }
+                }
+
+                
+            }
+
+            .description-poster-section{
+                flex: 2;
+
+
+                .description-section{
+                    h2{
+                        margin-top: 0;
+                    }
+                }
+                .movie-description-section{
+                    @include mx.maxWidthWeb;
+                    
+                    .aboutAuthor{
+                        p{
+                            text-align: left;
+                        }
+                    }
+                }
+                .poster-movie{
+                    display: none;
+                }
+            }
+
+            
+        }
+
+        .showtime-section2{
+            display: none;
+        }
+
+        .cast-info-section3{
+
+            padding-bottom: 15rem;
+            position: absolute;
+
+            top:940px;
+            left:430px;
+
+        }
+
+
+    }
+}
+

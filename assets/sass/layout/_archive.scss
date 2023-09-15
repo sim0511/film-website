@@ -1,0 +1,391 @@
+
+@use './../abstract/color' as c;
+@use './../abstract/mixins' as mx;
+@use './../abstract/typography' as t;
+
+
+
+.img-text-wrapper{
+    .movie-shorttext-inner{
+        .genre-archeive-div{
+            display: flex;
+            flex-wrap: wrap;
+            gap:1rem;
+            button{
+                @include mx.BlackBtnMob;
+                
+            }
+        }
+    }
+}
+
+
+
+@media screen and (min-width:mx.$media-mobile-width){
+    .archive-main{
+        padding-top: 9rem;
+
+        h1,h3{
+            text-align: center;
+        }
+        .gif{
+            display: none;
+            
+        }
+    
+        .CountryMovie{
+            display: flex;
+            flex-flow: row wrap;
+            gap:1rem;
+            padding: 1rem;
+    
+
+            .archieve-article-grp1{
+                display: flex;
+                flex-flow: row wrap;
+                gap:1rem;
+                padding: 1rem;
+                article{
+                    flex: 1 0 20%;
+                    border: 1px solid black;
+                    border-radius: 10px;
+                    padding: 1rem;  
+        
+                    img{
+                        border-radius: 10px;
+                    }
+                    h2{
+                        text-align: left;
+                    }
+
+                    .sneakpeek{
+                        display: none;
+                    }
+        
+                }
+                .article-inner{
+                    display: flex;
+                    flex-flow: row wrap;
+                    gap:1rem;
+                    // padding: 1rem;
+                    article{
+                        flex: 1 0 20%;
+                        border: 1px solid black;
+                        border-radius: 10px;
+                        padding: 1rem;  
+        
+                        img{
+                            border-radius: 10px;
+                        }
+                        h2{
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+
+            .archieve-article-grp2{
+                display: flex;
+                flex-flow: row wrap;
+                gap:1rem;
+                padding: 1rem;
+
+                .article-inner{
+                    display: flex;
+                    flex-flow: row wrap;
+                    gap:1rem;
+                    // padding: 1rem;
+                    article{
+                        flex: 1 0 20%;
+                        border: 1px solid black;
+                        border-radius: 10px;
+                        padding: 1rem;  
+        
+                        img{
+                            border-radius: 10px;
+                        }
+                        h2{
+                            text-align: left;
+                        }
+                    }
+                }
+                article{
+                    flex: 1 0 40%;
+                    border: 1px solid black;
+                    border-radius: 10px;
+                    padding: 1rem;  
+        
+                    img{
+                        border-radius: 10px;
+                    }
+                    h2{
+                        text-align: left;
+                    }
+
+                    .sneakpeek{
+                        display: none;
+                    }
+        
+                }
+            }
+            
+        }
+    }
+}
+
+
+
+@media screen and (min-width:mx.$media-tablet-width){
+
+    .header-nav-wrapper {
+        .nav-sub-header {          
+                a{
+                    font-size: 14px !important;
+                }
+            }   
+        }
+
+    
+
+
+    .archive-main{
+        .gif{
+            display: none;
+        }
+        .CountryMovie{
+
+            .archieve-article-grp1{
+                flex-wrap: nowrap;
+
+                article{
+                    flex: 1 0 30%;
+                    padding: 1rem;
+
+                    .sneakpeek{
+                        display: none;
+                    }
+                }
+                .article-inner{
+
+                    article{
+                        flex: 1 0 25%;
+                        // padding: 1rem;
+                    }  
+                }
+            }
+            .archieve-article-grp2{
+                flex-wrap: nowrap;
+
+                .article-inner{
+                    article{
+                        flex: 1 0 25%;
+                        // padding: 1rem;
+                    }  
+                }
+                article{
+                    flex: 1 0 30%;
+                    // padding: 1rem;
+
+                    .sneakpeek{
+                        display: none;
+                    }
+                }
+            }
+
+            
+        }
+    }
+}
+
+
+
+
+@media screen and (min-width:1200px){
+    
+    .archive-main{
+
+        .heading-gif-wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .h1-h3-grp{
+                flex: 2;
+                padding-left: 2rem;
+                h1{
+                    text-align: left;
+                    margin-bottom: 0;
+                }
+                h3{
+                    text-align: left;
+                }
+            }
+            .gif{
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            text-align: right;
+            padding-right: 3rem;
+            }
+        }
+
+
+        
+
+        .CountryMovie{
+            .archieve-article-grp1{
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: start;
+             
+
+                article{
+                    box-sizing: border-box;
+
+                    .img-text-wrapper{
+                        display: flex;
+                        gap:1rem;
+
+                        img{
+                        width:50%;
+                        }
+                    }
+
+                    .sneakpeek{
+                        display: flex !important;
+
+                        .topCast{
+                            display: flex;
+                            flex-flow: column wrap;
+                            justify-content: center;
+                            align-items: center;
+
+                            figure{
+                                display: flex;
+                                flex-flow: column wrap;
+                                justify-content: center;
+                                align-items: center;
+
+                                img{
+                                   @include mx.borderRad;
+                                }
+
+                                figcaption{
+                                    p{
+                                        font-weight: bold;
+                                        span{
+                                            display: block;
+                                            font-weight: normal;
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+
+                            }
+
+                        }
+
+                        .image-collection{
+                            align-self: center;
+                        }
+                    }
+                    
+                    
+                }
+
+                .article-inner{
+                    display: flex;
+                    flex-flow: column wrap;
+                    flex: 1 0 20%; 
+                    
+                    .img-text-wrapper{
+                        display: flex;
+                        gap:1rem;
+
+                        img{
+                            width:50%;
+                            }
+
+                    }
+
+                }
+            }
+            .archieve-article-grp2{
+                display: flex;
+                flex-wrap: nowrap;
+
+                article{
+                    box-sizing: border-box;
+
+                    .img-text-wrapper{
+                        display: flex;
+                        gap:1rem;
+
+                        img{
+                            width:50%;
+                            }
+                       
+                    }
+
+                    .sneakpeek{
+                        display: flex !important;
+
+                        .topCast{
+                            display: flex;
+                            flex-flow: column wrap;
+                            justify-content: center;
+                            align-items: center;
+
+                            figure{
+                                display: flex;
+                                flex-flow: column wrap;
+                                justify-content: center;
+                                align-items: center;
+
+                                img{
+                                   @include mx.borderRad;
+                                }
+
+                                figcaption{
+                                    p{
+                                        font-weight: bold;
+                                        span{
+                                            display: block;
+                                            font-weight: normal;
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+
+                            }
+
+                        }
+
+                        .image-collection{
+                            align-self: center;
+                        }
+                    }
+                    
+                }
+
+                .article-inner{
+                    display: flex;
+                    flex-flow: column wrap;
+                    flex: 1 0 20%;
+
+                    .img-text-wrapper{
+                        display: flex;
+                        gap:1rem;
+
+                        img{
+                            width:50%;
+                        }
+                    }
+                    
+
+                }
+
+            }
+        }
+    }
+}
+

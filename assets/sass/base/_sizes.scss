@@ -1,0 +1,30 @@
+/* the size of various elements ============== */
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: unset;
+}
+
+article img{
+    width:100%;
+    height: auto;
+}
+
+.logo-below{
+    width:100px;
+}
+
+img#spon1{
+    width:100px;
+}
+img#spon2{
+    width: 250px;
+}
+
+video{
+    width: 100%;
+    height: auto;
+}

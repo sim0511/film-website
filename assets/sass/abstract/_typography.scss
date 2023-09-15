@@ -1,0 +1,84 @@
+@use './../abstract/mixins' as mx;
+
+// typography ===============
+
+$main-heading-font : 'Libre Franklin', sans-serif;
+
+$text-font: 'Montserrat', serif;
+
+
+
+@media screen and (min-width:mx.$media-mobile-width){
+    .hero-heading-mob{
+        font-size:30px;
+    }
+    .text-mob-p{
+        font-size:15px;
+    }
+    .h2-mob{
+        font-size: 25px;
+    }
+
+    .h1-mob-one{
+        font-size: 40px;
+    }
+
+    .p-mob-one{
+        font-size: 20px;
+    }
+
+    .p-mob-one-con{
+        font-size: 15px;
+    }
+
+    .text-mob-one{
+        font-size: 19px;
+    }
+
+    .h3-mob{
+        font-size: 14px;
+    }
+    
+    
+} 
+
+
+    @media screen and (min-width:1000px){
+        .hero-header-web{
+            font-size:55px;
+        }
+        
+        .text-web-p{
+            font-size: 20px;
+        }
+
+        .h2-web{
+            font-size: 45px;
+        }
+
+        .h1-web-one{
+            font-size: 6rem;
+        }
+
+        .p-web-one{
+            font-size: 20px;
+        }
+
+        .text-web-one{
+            font-size: 23px;
+        }
+
+        .h3-web{
+            font-size: 33px;
+        }
+    }
+    
+
+
+
+     
+
+
+
+
+

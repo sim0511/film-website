@@ -1,0 +1,766 @@
+@use './../abstract/color' as color;
+@use './../abstract/typography' as t;
+@use './../abstract/mixins' as mx;
+
+/* the main ======================== */
+
+#sortSelect{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    &:hover{
+        background-color: rgb(229, 98, 98);
+    }
+}
+
+.news-section{
+    .lastest-news-section{
+        .picture-readmore-text{
+
+            img{
+                box-sizing: border-box;
+                width: 100%;
+            }
+
+            p{
+
+                text-align:justify;
+            }
+            a{
+                text-decoration: none;
+                float: right;
+                color: black;
+
+                &:hover{
+                    color: color.$accent-color-d;
+                }
+            }
+
+        }
+    }
+}
+
+.today-film-section{
+    .section-container{
+        .picture-feature-text{
+            .todays-section-textonly{
+                p span{
+                    font-weight: bold;
+                    text-align: right;
+                    
+                }
+                p a{
+                    color:color.$accent-color-d;
+                    font-weight: bolder;
+                    text-decoration: none;
+                }
+            }
+            
+        }
+    }
+}
+
+
+.pictures-feature .picture-feature-text{
+    position: relative;
+    overflow: hidden; /* to hide the text flow at the end */
+} 
+
+
+.featured-sub-group{
+    background-color: rgba(0,0,0,.6);
+    position: absolute;
+    top:5rem;
+    bottom: 5rem;
+    right: 0;
+    left: 0;
+    color: white;
+    // inset:0;
+
+    display: flex;
+    flex-flow:column wrap;
+    justify-content: start;
+    align-items:flex-start;
+    text-align: center;
+    padding: 2rem;
+    line-height: 1.4;
+
+
+    transform: translateY(100%);
+    transition: transform .5s ease-in-out;
+    pointer-events: none;
+
+
+    form{
+        button:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+
+.message-up .featured-sub-group{
+    bottom:0;
+    transform: translateY(0);
+} 
+
+
+
+
+
+
+
+@media screen  and (max-width:mx.$media-mobile-width){
+    
+   
+      
+      /* Styles for the "featured-sub-group" when not using the hover effect */
+      .featured-sub-group {
+        display: none;
+        background-color: rgba(0, 0, 0, .6);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        color: white;
+      
+        /* Center the text */
+        display: flex;
+        flex-flow: column wrap;
+        justify-content:start;
+        align-items: start;
+        text-align: center;
+        padding: 2rem;
+        line-height: 1.4;
+      
+        transform: translateY(100%);
+        transition: transform .5s ease-in-out;
+        pointer-events: none;
+
+        width:90%;
+        height: 400px;
+        margin: auto;
+      }
+      
+      /* Styles for the "featured-sub-group" when the "message-up" class is added */
+      .message-up .featured-sub-group {
+        bottom: 0;
+        transform: translateY(0);
+      }
+
+
+
+        main{
+        box-sizing: border-box;
+        width: 100%;
+        }
+        .index-main{
+        box-sizing: border-box;
+        width: 100%; /* Adjust the width as needed */
+        margin: 0 auto;
+        }
+        .pictures-feature .picture-feature-text{
+        position: relative;
+        overflow: hidden; /* to hide the text flow at the end */ 
+        } 
+    
+        .featured-sub-group {
+            p{
+            font-family:t.$main-heading-font;
+            text-transform: capitalize;
+            }
+    
+            form input{
+            border:none;
+            color:white;
+            background-color:color.$accent-color-d;
+            padding:1rem;
+            border-radius: 5px;
+            }
+        }
+    
+    .pictures-feature{ 
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+    }
+    
+    
+    
+        h2{
+            font-family:t.$main-heading-font;
+            text-align: center;
+        }
+    
+    
+        .main-hero-section{
+            background-color: rgba(32,7,10,255);
+            text-align: center;
+            padding: 1rem;
+            margin-top: 6.2rem;
+        
+            img{
+               display: none;             
+            }
+        
+            .hero-section-text{
+                color: white;
+        
+    
+                p span{
+                    color:color.$accent-color-d;
+                    font-weight: bold;
+                }
+            }
+        }
+    
+        .featured-film-section{
+            z-index: 40;
+            .feature-container{         
+                .slider-feature-wrapper{
+                    display: flex;
+                    gap:1rem;
+    
+                } 
+            }
+        }
+    
+    
+        .today-film-section{
+    
+    
+            .section-container{
+                    margin:1rem;
+                    display: flex;
+                    flex-flow: column wrap;
+                    justify-content: center;
+                    align-items: center;
+                    gap:1rem;
+    
+                .picture-feature-text{
+                    
+                    border:1px solid black;
+                    width: 100%;
+                    margin: auto;
+                    border-radius: 10px;
+                    box-shadow: 0 0 4px;
+                    box-sizing: border-box;
+                    flex: 1 0 40%;
+    
+                    iframe{
+                        box-sizing: border-box;
+                        width: 100%;
+                        border-radius: 10px  10px 0 0!important;
+
+                    }
+                    .todays-section-textonly{
+                        text-align: center;
+                    }
+    
+                }
+            }
+        }
+        .news-section{
+               
+            .sort-wrapper{
+                text-align: right;
+                margin: 1rem 2%;
+            }
+            .lastest-news-section{
+                display: grid;
+                gap:1rem;
+    
+                .lastest-news-section{
+    
+                    .picture-feature-text{
+                       margin:1rem;
+    
+                    }
+                }
+            }
+        }
+}
+
+
+@media screen and (max-width:mx.$media-tablet-width){
+    .main-hero-section{
+        background-color: rgba(32,7,10,255);
+        text-align: center;
+        padding: 1rem;
+        margin-top: 6.2rem;
+    
+        img{
+           display: none;
+           
+        }
+    
+        .hero-section-text{
+            color: white;
+    
+
+            p span{
+                color:color.$accent-color-d;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (min-width:mx.$media-mobile-width){
+
+
+        .pictures-feature .picture-feature-text{
+        position: relative;
+        overflow: hidden; /* to hide the text flow at the end */ 
+        } 
+    
+      
+      /* Styles for the "featured-sub-group" when not using the hover effect */
+      .featured-sub-group {
+        display: none;
+        background-color: rgba(0, 0, 0, .6);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        color: white;
+      
+        /* Center the text */
+        display: flex;
+        flex-flow: column wrap;
+        justify-content:start;
+        align-items: start;
+        text-align: center;
+        line-height: 1.4;
+      
+        transform: translateY(100%);
+        transition: transform .5s ease-in-out;
+        pointer-events: none;
+
+      }
+      
+      /* Styles for the "featured-sub-group" when the "message-up" class is added */
+      .message-up .featured-sub-group {
+        bottom: 0;
+        transform: translateY(0);
+        width: 100%;
+      }    
+
+
+
+
+
+.featured-sub-group{
+
+    p{
+        font-family:t.$main-heading-font;
+        text-transform: capitalize;
+    }
+
+    form input{
+        border:none;
+        color:white;
+        background-color:color.$accent-color-d;
+        padding:1rem;
+        border-radius: 5px;
+    }
+}
+
+.pictures-feature{ 
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+
+h2,h1{
+    font-family:t.$main-heading-font;
+    // text-align: center;
+}
+
+p{
+    font-family:t.$text-font;
+}
+
+
+    .main-hero-section1{
+        margin-top: 7rem;
+    
+        .hero-section-text{
+            
+            form{
+                text-align: left;
+
+                input{
+                    @include mx.RedBtnMob();
+                }
+            }
+
+            p{
+                text-align: left;
+            }
+
+            p span{
+                color:color.$accent-color-d;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .featured-film-section{
+
+        h2{
+            text-align: center;
+        }
+
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        .feature-container{         
+            .slider-feature-wrapper{
+                display: flex;
+                gap:1rem;
+
+                .picture-feature-text{
+                    .featured-sub-group{
+                        form{
+                            input{
+                                @include mx.RedBtnMob();
+                            }
+                        }
+                    }
+                }
+
+            } 
+        }
+    }
+
+
+    .today-film-section{
+
+        h2{
+            text-align: center;
+        }
+
+        .section-container{
+                margin:1rem;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
+                gap:1rem;
+
+            .picture-feature-text{
+                
+                border:1px solid black;
+                width: 100%;
+                margin: auto;
+                border-radius: 10px;
+                box-shadow: 0 0 4px;
+                box-sizing: border-box;
+                flex: 1 0 40%;
+
+                iframe{
+                    box-sizing: border-box;
+                    width: 100%;
+                    border-radius: 10px 10px 0 0 !important;
+                }
+                
+
+                .todays-section-textonly{
+
+                        grid-template-columns: repeat(2,1fr);
+                        gap:1rem;
+                       
+                        p{
+                            display: grid;
+                            grid-template-columns: repeat(2,1fr);
+                            text-align: left;
+                            gap:.5rem;
+                        }
+                }
+                
+
+            }
+        }
+    }
+
+
+    .join-now-group{
+
+        .membership-section{
+            background-color: color.$primary-color-d;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            margin:1rem;
+            color: white;
+            text-align: center;
+
+            form{
+                text-align: center;
+
+                button{
+                    @include mx.BlackBtnMob();
+                }
+            }
+            
+        }
+        .volunteer-section{
+            background-color: color.$primary-color-d;
+            padding: 1rem;
+            margin:1rem;
+            color: white;
+            text-align: center;
+
+            form{
+                text-align: center;
+
+                button{
+                    @include mx.BlackBtnMob();
+                }
+            }
+        }
+
+    }
+    .news-section{
+        margin-top: 5rem;
+
+        h2{
+            text-align: center;
+        }
+           
+        .sort-wrapper{
+            text-align: right;
+            margin: 1rem 2%;
+        }
+        .lastest-news-section{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap:1rem;
+            margin: 1rem;
+
+            .lastest-news-section{
+
+                .picture-readmore-text{
+                   margin:1rem;  
+                   height: 200px;
+                }
+            }
+        }
+    }
+
+    .donate-section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color:color.$primary-color-d;
+        color: white;
+
+        .donate-text-group{
+            // flex: 2 0 50%;
+            display: flex;
+            flex-flow: column nowrap;
+            // justify-content: start;
+            align-items: start;
+
+            p{
+                margin-top: 0;
+            }
+        }
+
+        form{
+            // flex: 1 ;
+            justify-self: flex-end;
+
+            input{
+                @include mx.BlackBtnMob();
+            }
+        }
+
+}
+
+
+
+
+
+@media screen and (min-width:mx.$media-tablet-width){
+    
+
+    .pictures-feature .picture-feature-text{
+        position: relative;
+        overflow: hidden; /* to hide the text flow at the end */ 
+        } 
+    
+      
+      /* Styles for the "featured-sub-group" when not using the hover effect */
+      .featured-sub-group {
+        display: none;
+        background-color: rgba(0, 0, 0, .6);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        color: white;
+      
+        /* Center the text */
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: start;
+        align-items: start;
+        text-align: center;
+        padding: 2rem;
+        line-height: 1;
+      
+        transform: translateY(100%);
+        transition: transform .5s ease-in-out;
+        pointer-events: none;
+      }
+      
+      /* Styles for the "featured-sub-group" when the "message-up" class is added */
+      .message-up .featured-sub-group {
+        bottom: 0;
+        transform: translateY(0);
+      }    
+
+
+    .main-sub-wrapper{
+        // @include mx.maxWidthWeb;
+
+
+
+        .featured-film-section{
+            margin-top: 3rem;
+        }
+        .todays-join-section-group{
+            // display: flex;
+
+            .today-film-section{
+                flex: 1 0 70%;
+                
+                .section-container{
+                    display: flex;
+                    flex-flow: row wrap;
+
+                    .picture-feature-text{
+                        flex: 1 0 35%;
+                    }
+                }
+
+
+            }
+
+            .join-now-group{
+                display: flex;
+                flex-wrap: nowrap;
+
+                .membership-section{
+                    flex: 1 0 35%;
+                    display: flex;
+                    flex-flow: column wrap;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .volunteer-section{
+                    flex: 1 0 35%;
+                    display: flex;
+                    flex-flow: column wrap;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+        .news-section{
+
+            .lastest-news-section{
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+    }
+
+
+    }
+
+    .main-hero-section2{
+        position: relative;
+        text-align: left !important;
+    
+        img{
+            // transform: scaleX(-1);
+            display: block;
+            width:100%;
+            height: auto;
+            background-size: contain;
+        }
+    
+        .hero-section-text{
+            position: absolute !important;
+            top: 50%;
+            left: 2%;
+            transform: translateY(-50%);
+            color: white;
+
+            p:first-of-type span{
+                color:color.$accent-color-d;
+            }
+        }
+    }
+
+    
+
+}
+
+
+
+@media screen and (min-width:1200px){
+    
+
+    .todays-join-section-group{
+        @include mx.maxWidthWeb;
+        display: flex;
+
+        .today-film-section{
+            
+            flex: 1 0 70%;
+            
+            .section-container{
+                display: flex;
+
+                .picture-feature-text{
+                    flex: 1 0 25% !important;
+                }
+                
+            }
+
+
+        }
+
+        .join-now-group{
+            flex-flow: column wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            .membership-section{
+                margin-top: 10rem;
+                flex: 1 0 35% !important;
+            }
+            .volunteer-section{
+                margin-bottom: 10rem;
+                flex: 1 0 35% !important;
+            }
+        }
+    }
+
+    .news-section{
+
+        .lastest-news-section{
+            grid-template-columns: repeat(4,1fr) !important;
+        }
+    }
+}

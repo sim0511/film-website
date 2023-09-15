@@ -1,0 +1,73 @@
+@use './../abstract/color' as c;
+
+
+$media-mobile-width:480px;
+$media-tablet-width:680px;
+
+
+
+@mixin logoSize{
+    max-width: 100px;
+    height: auto;
+}
+
+@mixin iconColor{
+    color:white;
+    font-size: 25px;
+}
+
+
+@mixin maxWidthMob{
+    max-width: 400px;
+    margin: auto;
+}
+
+@mixin maxWidthWeb{
+    max-width: 1370px;
+    margin: auto;
+}
+
+
+@mixin socioIcon{
+    font-size: 30px;
+}
+
+@mixin AelementWeb{
+    font-size: 21px;
+}
+
+
+@mixin BlackBtnMob{
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    font-size: 15px;
+
+    &:hover{
+        background-color: c.$accent-color-d;
+        border:1px solid black;
+    }
+}
+
+@mixin RedBtnMob{
+    border: none;
+    background-color: c.$accent-color-d;
+    color: white;
+    padding: 1rem;
+    font-size: 15px;
+    border-radius: 5px;
+
+    &:hover{
+        background-color:rgb(231, 146, 146);
+        border:1px solid black;
+    }
+}
+
+
+
+@mixin borderRad{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}

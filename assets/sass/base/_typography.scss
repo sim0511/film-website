@@ -1,0 +1,6 @@
+@use './../abstract/typography' as t;
+/* the typography ================= */
+
+body{
+    font-family: t.$text-font;
+}

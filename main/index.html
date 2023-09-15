@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="icon" href="./../assets/logo/2logo.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./../assets/logo/2logo.svg" type="image/x-icon">
+
+
+    
+
+    <script src="./../assets/js/header.js" defer></script>
+    <script src="./../assets/js/footer.js" defer></script>
+
+    <script src="./../assets/js/index.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+    
+    
+    <!-- google fonts ====================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/feb2276715.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="./../assets/style.css">
+
+    
+</head>
+<body>
+
+    
+   <header>
+        <div class="header-overall">
+            
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass search-btn" ></i>
+            
+                    <nav class="input-icon-header">
+                        <div class="grp-small">
+                            <label for="text-input">What are you looking for?</label>
+                            <div class="text-icon-small-group">
+                                <input type="text" id="text-input" placeholder="Search.." autofocus>
+                                <i class="fa-solid fa-x closeSearch-btn"></i>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            
+                <div class="logo-above">
+                    <img src="../assets/logo/College.svg" alt="My logo">
+                </div>
+            
+            <div class="header-nav-wrapper">
+                <i class="fa-solid fa-bars btn-mode"></i>
+                <nav class="panel-container">
+                    <ul class="nav-sub-header">
+                        <li><h2>Menu</h2></li>
+                        <li><a href="#hero" class="nava">Festival2024</a></li>
+                        <li><a href="#news" class="nava">News</a></li>
+                        <li><a href="#todays" class="nava">Films</a></li>
+                        <li><a href="#member" class="nava">Become a member</a></li>
+                        <li><a href="./../main/archives.html">Archives</a></li>
+                    </ul>
+                    <i class="fa-solid fa-x close-btn"></i>
+                </nav>
+                
+            </div>
+        </div> 
+        
+    </header>
+
+    <main>
+
+        <div class="index-main">
+            <div class="main-hero-section1 main-hero-section2" id="hero">
+                <img src="./../assets/images/hero-image-2.jpg" alt="video recorder">
+                <div class="hero-section-text">
+                    <h1 class="hero-header-web hero-heading-mob">2024 College Film Festival</h1>
+                    <p class="text-mob-p text-web-p">Come join us
+                    for the best five days of your life</p>
+                    <p class="text-mob-p text-web-p"><span>Location:</span> Langara College, Vancouver, BC</p>
+                    <p class="text-mob-p text-web-p"><span>Date:</span> July 13 – 17 July 2024</p>
+                    <p class="text-mob-p text-web-p">Click below to get a ticket now!!!</p>
+                    <form action="./onefilm.html" class="hero-section-form">
+                        <input type="submit" value="Get ticket">
+                    </form>
+                    <p class="text-mob-p text-web-p">* last date to apply : April 25 2024 *</p>
+                </div>
+            </div>
+            <div class="main-sub-wrapper">
+            
+                <div class="featured-film-section">
+                            <h2 class="h2-mob h2-web">Featured Films</h2>
+            
+                            
+                            <div class="feature-container">
+                                <div class="slider-feature-wrapper pictures-feature">
+                                    <div class="picture-feature-text">
+                                        <img src="./../assets/images/ant-man.webp" alt="ant-man">
+                                        <div class="featured-sub-group">
+                                            <p class="text-mob-p text-web-p">Friday, 15 September </p>
+                                            <form action="./onefilm.html">
+                                                <input type="submit" Value="See Tickets">
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="picture-feature-text">
+                                            <img src="./../assets/images/barbie.webp" alt="barbie">
+                                            <div class="featured-sub-group">
+                                                <p class="text-mob-p text-web-p">Thursday, 03 August </p>
+                                                <form action="./onefilm.html">
+                                                    <input type="submit" Value="See Tickets">
+                                                </form>
+                                            </div>
+                                    </div>
+                                    <div class="picture-feature-text">
+                                            <img src="./../assets/images/mario.webp" alt="Mario movie">
+                                            <div class="featured-sub-group">
+                                                <p class="text-mob-p text-web-p">Wednesday, 26 July </p>
+                                                <form action="./onefilm.html">
+                                                    <input type="submit" Value="See Tickets">
+                                                </form>
+                                            </div>
+                                    </div>
+                                    <div class="picture-feature-text">
+                                            <img src="./../assets/images/guardian.webp" alt="Guardian of the Galaxy">
+                                            <div class="featured-sub-group">
+                                                <p class="text-mob-p text-web-p">Tuesday, 28 February </p>
+                                                <form action="./onefilm.html">
+                                                    <input type="submit" Value="See Tickets">
+                                                </form>
+                                            </div>
+                                    </div>
+                                    <div class="picture-feature-text">
+                                            <img src="./../assets/images/oppenheimer.webp" alt="oppenheimer">
+                                            <div class="featured-sub-group">
+                                                <p class="text-mob-p text-web-p">Tuesday, 05 December </p>
+                                                <form action="./onefilm.html">
+                                                    <input type="submit" Value="See Tickets">
+                                                </form>
+                                            </div>
+                                    </div>
+                                    <div class="picture-feature-text">
+                                            <img src="./../assets/images/spider.webp" alt="Spider Man">
+                                            <div class="featured-sub-group">
+                                                <p class="text-mob-p text-web-p">Monday, 25 September </p>
+                                                <form action="./onefilm.html">
+                                                    <input type="submit" Value="See Tickets">
+                                                </form>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+            
+                <div class="todays-join-section-group" id="todays">
+                            <div class="today-film-section main-conatiner">
+                                <h2 class="h2-mob h2-web">Summer Special</h2>
+                                <div class="section-container">
+                                    <div class="picture-feature-text">
+                                        <iframe src="https://www.youtube.com/embed/uYPbbksJxIg" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        <div class="todays-section-textonly">
+                                            <p class="text-mob-p text-web-p"><span>Time:</span> 2:00 PM</p>
+                                            <p class="text-mob-p text-web-p"><span>Theatre:</span> Cinema 3</p>
+                                            <p class="text-mob-p text-web-p"><span>Country:</span> <a href="./../main/archives.html">Canada</a></p>
+                                            <p class="text-mob-p text-web-p"><span>Director:</span>Christoper N.</p>
+                                        </div>
+                                    </div>
+                                    <div class="picture-feature-text">
+                                        <iframe src="https://www.youtube.com/embed/NyeG2mLVCS4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        <div class="todays-section-textonly">
+                                            <p class="text-mob-p text-web-p"><span>Time:</span> 11:00 AM</p>
+                                            <p class="text-mob-p text-web-p"><span>Theatre:</span> Cinema 1</p>
+                                            <p class="text-mob-p text-web-p"><span>Country:</span> <a href="./../main/archives.html">India</a></p>
+                                            <p class="text-mob-p text-web-p"><span>Director:</span>Sajid N.</p>
+                                        </div>
+                                    </div>
+                                    <div class="picture-feature-text">
+                                        <iframe src="https://www.youtube.com/embed/t3PzUo4P21c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        <div class="todays-section-textonly">
+                                            <p class="text-mob-p text-web-p"><span>Time:</span> 6:00 PM</p>
+                                            <p class="text-mob-p text-web-p"><span>Theatre:</span> Cinema 2</p>
+                                            <p class="text-mob-p text-web-p"><span>Country:</span> <a href="./../main/archives.html">United States</a></p>
+                                            <p class="text-mob-p text-web-p"><span>Director:</span> Marguerite </p>
+                                        </div>
+                                    </div>
+                                    <div class="picture-feature-text">
+                                        <iframe src="https://www.youtube.com/embed/Dr1mOzqYzXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        <div class="todays-section-textonly">
+                                            <p class="text-mob-p text-web-p"><span>Time:</span> 10:00 AM</p>
+                                            <p class="text-mob-p text-web-p"><span>Theatre:</span> Cinema 4</p>
+                                            <p class="text-mob-p text-web-p"><span>Country:</span> <a href="./../main/archives.html">Japan</a></p>
+                                            <p class="text-mob-p text-web-p"><span>Director:</span> Wesley </p>
+                                        </div>
+                                    </div>
+                                    <div class="picture-feature-text">
+                                        <iframe src="https://www.youtube.com/embed/RDE6Uz73A7g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        <div class="todays-section-textonly">
+                                            <p class="text-mob-p text-web-p"><span>Time:</span> 12:30 PM</p>
+                                            <p class="text-mob-p text-web-p"><span>Theatre:</span> Cinema 3</p>
+                                            <p class="text-mob-p text-web-p"><span>Country:</span> <a href="./../main/archives.html">Canada</a></p>
+                                            <p class="text-mob-p text-web-p"><span>Director:</span> Alex Jen</p>
+                                        </div>
+                                    </div>
+                                    <div class="picture-feature-text">
+                                        
+                                        <iframe src="https://www.youtube.com/embed/DDBnjPAeF9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        <div class="todays-section-textonly">
+                                            <p class="text-mob-p text-web-p"><span>Time:</span> 12:00 PM</p>
+                                            <p class="text-mob-p text-web-p"><span>Theatre:</span> Cinema 4</p>
+                                            <p class="text-mob-p text-web-p"><span>Country:</span> <a href="./../main/archives.html">Japan</a></p>
+                                            <p class="text-mob-p text-web-p"><span>Director:</span> Elva Cole</p>
+                                        </div>
+                                    </div>
+                                    <div class="picture-feature-text">
+                                        <iframe src="https://www.youtube.com/embed/vS3_72Gb-bI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        <div class="todays-section-textonly">
+                                            <p class="text-mob-p text-web-p"><span>Time:</span> 7:15 PM</p>
+                                            <p class="text-mob-p text-web-p"><span>Theatre:</span> Cinema 1</p>
+                                            <p class="text-mob-p text-web-p"><span>Country:</span> <a href="./../main/archives.html">United States</a></p>
+                                            <p class="text-mob-p text-web-p"><span>Director:</span>Angel M.</p>
+                                        </div>
+                                    </div>
+                                    <div class="picture-feature-text">
+                                        <iframe src="https://www.youtube.com/embed/pBk4NYhWNMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        <div class="todays-section-textonly">
+                                            <p class="text-mob-p text-web-p"><span>Time:</span> 1:00 PM</p>
+                                            <p class="text-mob-p text-web-p"><span>Theatre:</span> Cinema 2</p>
+                                            <p class="text-mob-p text-web-p"><span>Country:</span> <a href="./../main/archives.html">United States</a></p>
+                                            <p class="text-mob-p text-web-p"><span>Director:</span> Hunter Kel</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            
+
+
+                            
+                                <div class="join-now-group" id="member">
+                                    <div class="membership-section">
+                                        <h2 class="h2-mob h2-web">Membership</h2>
+                                        <p class="text-mob-p text-web-p">With updated levels, new benefits, and dedicated Festival ticket pre-sale days,Membership programme is now even better.</p>
+                                        <form action="#">
+                                            <button class="member-btn">Join now</button>
+                                        </form>
+                                    </div>
+                                    <div class="volunteer-section">
+                                        <h2 class="h2-mob h2-web">Volunteer</h2>
+                                        <p class="text-mob-p text-web-p">Each of us can make a difference when we lend a hand…</p>
+                                        <form action="#">
+                                            <button class="volunteer-btn">Volunteer now</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            
+
+                </div>
+                                
+
+                <div class="news-section" id="news">
+                                    <h2 class="h2-mob h2-web">Latest News</h2>
+
+                                    <div class="sort-wrapper">
+                                        <select id="sortSelect" title="sort">
+                                            <option value="" hidden>Sort By</option>
+                                            <option value="New">New to Old</option>
+                                            <option value="Old">Old to New</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="lastest-news-section">
+                                        <div class="picture-readmore-text">
+                                            <img src="./../assets/images/news/image-8041.webp" alt="Christoper Nolan">
+                                            <p class="text-mob-p text-web-p">Many reviews for Christopher Nolan’s “Oppenheimer” noted that the film felt like the director’s own version of Oliver Stone’s sprawling historical epic “JFK,” and now Stone himself has weighed in on Nolan’s latest achievement.....</p>
+                                            <a href="./">Read More</a>
+                                        </div>
+                                        <div class="picture-readmore-text">
+                                            <img src="./../assets/images/news/image-8045.webp" alt="Ken">
+                                            <p class="text-mob-p text-web-p"> In Greta Gerwig’s new movie, the real-life creator of the Barbie doll and co-founder of Mattel, Ruth Handler (played by Rhea Perlman), explains to Barbie (Margot Robbie) that she named the doll after her daughter Barbara....</p>
+                                            <a href="./../main/onefilm.html">Read More</a>
+                                        </div>
+                                        <div class="picture-readmore-text">
+                                            <img src="./../assets/images/news/image-8042.webp" alt="Shortcomings" style="height: 180px;">
+                                            <p class="text-mob-p text-web-p">Early in the upcoming Randall Park-directed film “Shortcomings,” couple Ben and Miko, both Asian Americans, bicker after watching a fictional film that mirrors 2018 blockbuster “Crazy Rich Asians.....</p>
+                                            <a href="./../main/onefilm.html">Read More</a>
+                                        </div>
+                                        
+                                        <div class="picture-readmore-text">
+                                            <img src="./../assets/images/news/image-8043.webp" alt="Pedro's Almodóvar’s film">
+                                            <p class="text-mob-p text-web-p"> Sony Pictures has set Pedro Almodóvar’s short film “Strange Way of Life” for a nationwide theatrical release on Oct. 6 following its Oct. 4 release in New York and Los Angeles....</p>
+                                            <a href="./../main/onefilm.html">Read More</a>
+                                        </div>
+                                        <div class="picture-readmore-text">
+                                            <img src="./../assets/images/news/image-8044.webp" alt="Theater">
+                                            <p class="text-mob-p text-web-p">Theatrical cinema in July enjoyed its highest revenues since pre-pandemic times, with global box office hitting $4.54 billion during the month.....</p>
+                                            <a href="./../main/onefilm.html">Read More</a>
+                                        </div>
+                                        <div class="picture-readmore-text">
+                                            <img src="./../assets/images/news/image-8046.webp" alt="Netflix" style="height: 185px;">
+                                            <p class="text-mob-p text-web-p"> The streaming service removes titles from its library around the world every month due to the expiration of licencing agreements – but users have been led to believe that releases released under the “Netflix Original” label would remain on the service indefinitely.....</p>
+                                            <a href="./../main/onefilm.html">Read More</a>
+                                        </div>
+                                        
+                                    </div>
+                </div>
+                            
+                
+            </div>
+            <div class="donate-section">
+                <div class="donate-text-group">
+                    <h2 class="h2-mob h2-web">Donate now , share</h2>
+                    <p class="text-mob-p text-web-p">I have found that among its other benefits, giving liberates the soul of the giver.</p>
+                </div>
+                <form action="#">
+                    <input type="submit" value="Donate Now">
+                </form>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="main-footer">
+            <div class="footer-wrap-sections">
+                <div class="footer-grp1-section1">
+                        <div class="logo logo-below">
+                            <img src="../assets/logo/College.svg" alt="my logo">
+                        </div>
+                        <div class="text-below">
+                            <p class="text-mob-p text-web-p">Cinema is a matter of what’s<br>
+                                in the frame and what’s out.</p>
+                        </div>
+                </div>
+                <div class="footer-group-2">
+                    <div class="footer-social-icons">
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com" aria-label="facebook">
+                                  <i class="fab fa-facebook" aria-hidden="true" title="facebook"></i>
+                                  <span class="sr-only">facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com" aria-label="instagram">
+                                  <i class="fab fa-instagram" aria-hidden="true" title="instagram"></i>
+                                  <span class="sr-only">instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.twitter.com" aria-label="twitter">
+                                  <i class="fab fa-twitter" aria-hidden="true" title="twitter"></i>
+                                  <span class="sr-only">twitter</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.snapchat.com" aria-label="snapchat">
+                                  <i class="fab fa-snapchat" aria-hidden="true" title="snapchat"></i>
+                                  <span class="sr-only">snapchat</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com" aria-label="youtube">
+                                  <i class="fab fa-youtube" aria-hidden="true" title="youtube"></i>
+                                  <span class="sr-only">youtube</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-bootom">
+                        <nav>
+                            <ul class="menu-down-container">
+                                <li>
+                                    <a href="#" class="first-a">Explore</a><i class="fa-solid fa-angle-down downArrow1"></i>
+                                    <ul class="down-menu-1">
+                                        <li><a href="#">Shop/Merchandise</a></li>
+                                        <li><a href="#">News and Stories</a></li>
+                                        <li><a href="#">Photo Gallery</a></li>
+                                        <li><a href="#">Archives</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="first-a">Support</a><i class="fa-solid fa-angle-down downArrow2"></i>
+                                    <ul class="down-menu-2">
+                                        <li><a href="#">Membership</a></li>
+                                        <li><a href="#">CFF Foundation</a></li>
+                                        <li><a href="#">Indiviually Giving</a></li>
+                                        <li><a href="#">Coorporate Giving</a></li>
+                                        <li><a href="#">Government Support</a></li>
+                                        <li><a href="#">Donate Now</a></li>
+                                        <li><a href="#">Volunteer</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="first-a">About Us</a><i class="fa-solid fa-angle-down downArrow3"></i>
+                                    <ul class="down-menu-3">
+                                        <li><a href="#">Our Story</a></li>
+                                        <li><a href="#">Our Mission</a></li>
+                                        <li><a href="#">Our Vision</a></li>
+                                        <li><a href="#">Annual Report</a></li>
+                                        <li><a href="#">Board of Trustee</a></li>
+                                        <li><a href="#">Leadership</a></li>
+                                        <li><a href="#">Department Contacts</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="first-a">Contact Us</a><i class="fa-solid fa-angle-down downArrow4"></i>
+                                    <ul class="down-menu-4">
+                                        <li><a href="#">Customer Support</a></li>
+                                        <li><a href="#">Press Center</a></li>
+                                        <li><a href="#">Jobs/Careers</a></li>
+                                        <li><a href="#">Entities</a></li>
+                                        <li><a href="#">Submit Your Film</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-form-bottom">
+                        <form action="#">
+                            <label for="join_news">Join the Newsletter now</label>
+                            <div id="footer-input-group">
+                                <input type="email" id="join_news" placeholder="Email">
+            
+                                <input type="submit" value="Subscribe">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="sponsers-group">
+                <img src="https://images.contentful.com/22n7d68fswlw/68JF33jwHYe6gQK0EWmQM2/4f98306025eccea32aac3c0eb754781d/logobar-01.png" alt="Lead Sponsor" class="spon-logo " id="spon1">
+                <img src="./../assets/logo/major.svg" alt="Major sponsers" class="spon-logo" id="spon2">
+                 <!-- <img src="./../assets/logo/canada-logo.png" alt="Government of Canada Homepage"> -->
+                <!-- <img src="./../assets/logo/ontario-logo.png" alt="Government of Ontario Homepage"> -->
+            </div>
+        </div>
+    </footer>
+
+
+   
+  
+</body>
+</html>
